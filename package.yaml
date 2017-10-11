@@ -1,0 +1,9 @@
+name: sop-experiments
+version: 0.1.0.0
+dependencies:
+  - base
+  - generics-sop
+executables:
+  sop-experiments:
+    source-dirs: src
+    main: Main.hs
