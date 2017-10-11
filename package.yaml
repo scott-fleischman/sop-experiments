@@ -3,6 +3,8 @@ version: 0.1.0.0
 dependencies:
   - base
   - generics-sop
+  - generics-sop-lens
+  - lens
 executables:
   sop-experiments:
     source-dirs: src
