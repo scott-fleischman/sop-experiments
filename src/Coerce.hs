@@ -42,3 +42,13 @@ ex3 = I t1 :* I t2 :* I t3 :* Nil
 
 ex3' :: NP I '[T3, T2, T1]
 ex3' = hcoerce ex3
+
+data S1 = S1
+data S2 = S2
+data S3 = S3
+
+ex4 :: NP I '[S1, S2, S3]
+ex4 = I S1 :* I S2 :* I S3 :* Nil
+
+-- ex4' :: NP I '[S3, S2, S1]
+-- ex4' = hcoerce ex4
