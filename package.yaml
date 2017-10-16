@@ -5,6 +5,7 @@ dependencies:
   - generics-sop
   - generics-sop-lens
   - lens
+ghc-options: -Wall
 executables:
   sop-experiments:
     source-dirs: src

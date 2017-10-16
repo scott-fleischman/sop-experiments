@@ -2,11 +2,11 @@
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE PatternSynonyms #-}
 {-# LANGUAGE TypeOperators #-}
+{-# OPTIONS_GHC -fno-warn-missing-pattern-synonym-signatures #-}
 
 module Fluid where
 
 import Generics.SOP
-import Generics.SOP.Lens
 
 data T0 = T0
 data T1 = T1
@@ -40,3 +40,4 @@ transform' :: NS I (T0 ': T1 ': ts) -> NS I (S0 ': S1 ': S2 ': ts)
 transform' (NS0 (I T0))  = (NS2 (I S2))
 transform' (NS1 (I T1))  = (NS2 (I S2))
 transform' (RS2 tn)      = (RS3 tn)
+transform' _             = undefined -- stastify exhaustivity checker
